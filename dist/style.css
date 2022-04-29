@@ -972,7 +972,7 @@ select {
 }
 
 .top-bg {
-  background: url("/img/top-bg.svg") top center no-repeat;
+  background: url("img/top-bg.svg") top center no-repeat;
   background-size: auto 23rem;
 }
 
@@ -982,7 +982,7 @@ select {
   }
 
   .bottom-bg {
-    background: url("/img/bottom-bg.svg") bottom center no-repeat;
+    background: url("img/bottom-bg.svg") bottom center no-repeat;
     background-size: 100% auto;
   }
 }
