@@ -1,0 +1,27 @@
+footer.py-5.mt-auto(class="lg:container lg:mx-auto 160 lg:py-10")
+  div(class="lg:flex lg:items-center")
+    .logo.mb-4(class="lg:mb-0 lg:block")
+      a(href="/").flex.items-center
+        .inline-flex.h-6.text-orange-400
+          include ../partials/logo_icon
+        .inline-flex.h-4.text-orange-400.ml-2
+          include ../partials/logo_text
+    ul(class="md:flex md:items-center md:w-full")
+      li.ml-8(class="lg:ml-10")
+        a(href="https://stripe-christmas-2b1.notion.site/Terms-Conditions-54ed48550a2f4a578e3927d234d675fb" target="_blank") Terms & Conditions
+      li.ml-8(class="lg:ml-10")
+        a(href="https://stripe-christmas-2b1.notion.site/Corecircle-s-Privacy-Policy-085df0c5e0c149fcad994dc66de9e646" target="_blank") Privacy Policy
+      li.ml-8(class="lg:ml-10")
+        a(href="https://www.instagram.com/corecircleapp/?hl=en" target="_blank") Contact Us
+      li.mt-4.ml-8(class="md:ml-auto md:mt-0")
+        .flex.gap-8
+          .bg-orange-400.rounded-full.h-8.w-8.flex.items-center.justify-center
+            .inline-block.w-4.h-4.text-white
+              include ../partials/icon_instagram
+
+          .bg-orange-400.rounded-full.h-8.w-8.flex.items-center.justify-center
+            .inline-block.w-4.h-4.text-white
+              include ../partials/icon_tiktok
+
+  .flex.items-center.mt-8.ml-8(class="md:justify-end md:ml-0 md:w-full")
+    .text-sm © 2022 | Corecircle | All rights reserved

@@ -1,0 +1,26 @@
+header.py-4.mb-10(class="lg:py-12 lg:container lg:mx-auto lg:mb-0")
+  nav.flex.items-center
+    .logo.mr-2
+      a(href="/").flex.items-center
+        .inline-flex.h-6.text-white
+          include ../partials/logo_icon
+        .inline-flex.h-4.text-white.ml-2
+          include ../partials/logo_text
+
+    .ml-auto(class="md:ml-6")
+      ul.flex.items-center
+        li.ml-auto(class="md:ml-6")
+          a.flex.items-center.text-white(href="https://www.instagram.com/corecircleapp/?hl=en" target="_blank")
+            .inline-block.w-5.h-5.text-white.mr-2(class="lg:w-4 lg:h-4")
+              include ../partials/icon_instagram
+            span.hidden(class="md:inline-block md:ml-2") Instagram
+        li.ml-6
+          a.flex.items-center.text-white(href="https://www.tiktok.com/@corecircle?lang=en" target="_blank")
+            .inline-block.w-5.h-5.text-white.mr-2(class="lg:w-4 lg:h-4")
+              include ../partials/icon_tiktok
+            span.hidden(class="md:inline-block md:ml-2") TikTok
+        li.ml-6
+          a.flex.items-center.text-white(href="/faq.html")
+            .inline-block.w-5.h-5.text-white.mr-2(class="lg:w-4 lg:h-4")
+              include ../partials/icon_circle-question
+            span.hidden(class="md:inline-block md:ml-2") FAQ

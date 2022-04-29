@@ -1,0 +1,31 @@
+{
+  "name": "corecircle",
+  "version": "1.0.0",
+  "description": "Corecircle website",
+  "main": "src/views/index.html",
+  "author": "Irina Sorokina <sorokina333@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "run-p server watch:*",
+    "server": "browser-sync start --server 'dist' --files \"dist/**/*.css, dist/**/*.js, dist/**/*.html, !node_modules/**/*.html\"",
+    "watch:templates": "onchange \"src/**/*.pug\" -- run-s build:templates build:styles",
+    "watch:styles": "onchange \"src/**/*.css\" -- run-s build:styles",
+    "watch:assets": "onchange \"src/assets/**/*\" -- run-s build:assets",
+    "build": "run-s build:*",
+    "build:templates": "pug -O pug.json src/views --out dist",
+    "build:styles": "tailwindcss -i ./src/style.css -o ./dist/style.css",
+    "build:assets": "cp -R src/assets/* dist/",
+    "deploy": "firebase deploy"
+  },
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.0",
+    "browser-sync": "^2.27.9",
+    "firebase-tools": "^10.6.0",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^7.1.0",
+    "prettier": "^2.6.2",
+    "pug-cli": "^1.0.0-alpha6",
+    "tailwindcss": "^3.0.23"
+  },
+  "dependencies": {}
+}

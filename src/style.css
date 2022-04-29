@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.top-bg {
+  background: url("/img/top-bg.svg") top center no-repeat;
+  background-size: auto 23rem;
+}
+
+@screen lg {
+  .top-bg {
+    background-size: 100% auto;
+  }
+
+  .bottom-bg {
+    background: url("/img/bottom-bg.svg") bottom center no-repeat;
+    background-size: 100% auto;
+  }
+}
+
+body {
+  @apply text-lg font-light leading-8;
+  color: #444562;
+  font-family: 'Poppins', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  /*system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji*/
+}
+
+ol,
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.letter-spacing {
+  letter-spacing: 0.05rem;
+}
+
+.h1 {
+  @apply font-semibold text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl leading-tight;
+  letter-spacing: 0.05rem;
+}
+
+.h2 {
+  @apply font-medium text-3xl md:text-4xl lg:text-5xl leading-tight;
+}
+
+.badge-primary{
+  @apply font-medium rounded-full;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 24px;
+  letter-spacing: 0.01rem;
+
+  background: linear-gradient(91.28deg, rgba(255, 165, 0, 0.2) 11.48%, rgba(255, 121, 85, 0.2) 53.89%, rgba(80, 107, 208, 0.2) 133.02%);
+}
+
+.btn-primary{
+  @apply font-medium rounded-full py-3.5 px-16;
+  @apply transition ease-in-out delay-150 duration-300 hover:scale-105;
+  letter-spacing: 0.05rem;
+
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: white;
+
+  background: linear-gradient(131.73deg, #FFA500 0%, #FFCB37 100%);
+  box-shadow: 0 3px 30px rgba(73, 73, 73, 0.15);
+}
+
+.bg-orange-400{
+  background-color: #FFA500;
+}
+.text-orange-400{
+  color: #FFA500;
+}
+
+.promo_count{
+  @apply flex items-baseline text-2xl lg:text-3xl font-semibold pt-2 leading-none;
+  @apply text-orange-400 lg:text-white;
+}
+
+
+details {
+  @apply py-6 border-b border-gray-200;
+}
+details:last-of-type{
+  @apply border-0;
+}
+
+details[open] > summary {
+  @apply text-orange-400 text-2xl;
+}
+
+summary {
+  @apply transition duration-300;
+  display: flex;
+  list-style: none;
+}
+details summary { list-style-type: none; }
+details summary::-webkit-details-marker { display: none; }
+details summary::marker { display: none; }
+
+
+details[open] .summary-text {
+  @apply opacity-100;
+}
+
+.summary-text{
+  @apply transition duration-300 opacity-0;
+}
+
+.summary_icon {
+  @apply transition duration-300 inline-block w-5 h-5 text-gray-400 mt-1 ml-auto;
+  min-width: 2rem;
+}
+details[open] .summary_icon {
+  @apply text-orange-400 rotate-180;
+}
+
+@keyframes sweep {
+  0%    {opacity: 0; transform: translateX(-0.5rem)}
+  100%  {opacity: 1; transform: translateX(0)}
+}
