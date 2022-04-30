@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "start": "run-p server watch:*",
-    "server": "browser-sync start --server 'dist' --files \"dist/**/*.css, dist/**/*.js, dist/**/*.html, !node_modules/**/*.html\"",
+    "server": "browser-sync start --server 'dist' --files \"dist/**/*.css, dist/**/*.js, dist/**/*.html, !node_modules/**/*.html\" --extensions \"html\"",
     "watch:templates": "onchange \"src/**/*.pug\" -- run-s build:templates build:styles",
     "watch:styles": "onchange \"src/**/*.css\" -- run-s build:styles",
     "watch:assets": "onchange \"src/assets/**/*\" -- run-s build:assets",
@@ -15,7 +15,7 @@
     "build:templates": "pug -O pug.json src/views --out dist",
     "build:styles": "tailwindcss -i ./src/style.css -o ./dist/style.css",
     "build:assets": "cp -R src/assets/* dist/",
-    "deploy": "firebase deploy"
+    "deploy": "firebase deploy --only hosting:corecircle-website-staging"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.0",

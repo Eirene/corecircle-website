@@ -97,7 +97,7 @@ details[open] > summary {
 }
 
 summary {
-  @apply transition duration-300;
+  @apply transition duration-300 hover:text-orange-400 hover:cursor-pointer;
   display: flex;
   list-style: none;
 }
@@ -111,7 +111,7 @@ details[open] .summary-text {
 }
 
 .summary-text{
-  @apply transition duration-300 opacity-0;
+  @apply transition duration-300 opacity-0 ;
 }
 
 .summary_icon {
