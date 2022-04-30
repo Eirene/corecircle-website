@@ -1,12 +1,15 @@
 const swiper = new Swiper('.swiper', {
   // Optional parameters
   loop: true,
-  effect: "cards",
-  grabCursor: true,
   initialSlide: 2,
-
-  // If we need pagination
+  grabCursor: true,
+  effect: "cards",
+  cardsEffect: {
+    rotate: false,
+  },
   pagination: {
     el: '.swiper-pagination',
   },
 });
+
+swiper.activeIndex = 1;
