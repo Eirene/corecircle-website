@@ -1,8 +1,9 @@
 const swiper = new Swiper('.swiper', {
   // Optional parameters
-  loop: false,
+  loop: true,
   effect: "cards",
   grabCursor: true,
+  initialSlide: 2,
 
   // If we need pagination
   pagination: {
