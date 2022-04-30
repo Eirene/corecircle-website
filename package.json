@@ -27,5 +27,7 @@
     "pug-cli": "^1.0.0-alpha6",
     "tailwindcss": "^3.0.23"
   },
-  "dependencies": {}
+  "dependencies": {
+    "swiper": "^8.1.4"
+  }
 }
