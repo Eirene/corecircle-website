@@ -1,36 +1,39 @@
-extends ../partials/layout
+extends ../partials/_layout
 block variables
   - var title = 'FAQ | Corecircle Website'
   - var description = 'FAQ | Corecircle Website'
 block content
 
   section.py-20(class="lg:container lg:mx-auto")
-    h1.h1 FAQs
-    p.max-w-lg
+    .mb-6.max-w-xl
+      h1.h1 FAQs
+    .max-w-lg
       | We’re here to help! If there’s a question that isn’t answered, email us at
       a(href="mailto:help@corecircle.com" class="hover:border-0").ml-2.border-b.border-current.font-medium help@corecircle.com
 
   section.max-w-2xl.mx-auto.pb-10(class="lg:max-w-3xl")
 
-    details(open)
-      summary
-        span.pr-2 Who is a Corecircle creator?
-        .summary_icon
+    .faq
+      button.accordion Who is a Corecircle creator?
+        .accordion_icon
           include ../partials/icon_chevron-down
-      .summary-text.mt-4 This review is LONG overdue, but Corecircle is a personality trait of mine. The amount of times I go throughout my day talking about or thinking about the app is insane!
+      .panel This review is LONG overdue, but Corecircle is a personality trait of mine. The amount of times I go throughout my day talking about or thinking about the app is insane!
 
-
-    details
-      summary
-        span.pr-2 What if this question will take a few strings on a mobile?
-        .summary_icon
+    .faq
+      button.accordion What if this question will take a few strings on a mobile?
+        .accordion_icon
           include ../partials/icon_chevron-down
-      .summary-text.mt-4 This review is LONG overdue, but Corecircle is a personality trait of mine. The amount of times I go throughout my day talking about or thinking about the app is insane!
+      .panel This review is LONG overdue, but Corecircle is a personality trait of mine. The amount of times I go throughout my day talking about or thinking about the app is insane!
 
-
-    details
-      summary
-        span.pr-2 Who is a Corecircle creator?
-        .summary_icon
+    .faq
+      button.accordion Who is a Corecircle creator?
+        .accordion_icon
           include ../partials/icon_chevron-down
-      .summary-text.mt-4 This review is LONG overdue, but Corecircle is a personality trait of mine. The amount of times I go throughout my day talking about or thinking about the app is insane!
+      .panel This review is LONG overdue, but Corecircle is a personality trait of mine. The amount of times I go throughout my day talking about or thinking about the app is insane!
+
+    .faq
+      button.accordion What if this question will take a few strings on a mobile?
+        .accordion_icon
+          include ../partials/icon_chevron-down
+      .panel This review is LONG overdue, but Corecircle is a personality trait of mine. The amount of times I go throughout my day talking about or thinking about the app is insane!
+

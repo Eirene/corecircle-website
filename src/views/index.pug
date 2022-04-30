@@ -1,4 +1,4 @@
-extends ../partials/layout
+extends ../partials/_layout
 block variables
   - var title = 'Corecircle'
   - var description = 'Corecircle'
@@ -31,10 +31,10 @@ block content
         p.mb-8 We’re building a social fitness app to help you become your best self physically and mentally. On Corecircle, you can create workouts, track progress, document your goals, and connect with like-minded fitness enthusiasts.
         p Through the power of community, we inspire and keep fitness enthusiasts consistent both in and out of the gym.
 
-    .self-center.justify-self-center
-      include ../partials/slider
+    .w-full.self-center.justify-self-center.overflow-hidden.pb-10
+      include ../partials/_slider
 
-  section.mb-20.bottom-bg(class="lg:py-20 lg:mb-0")
+  section.mb-20.bottom-bg(class="lg:py-20 lg:-mx-4 lg:px-4 lg:my-0")
     div(class='grid lg:grid-cols-2 lg:gap-2 lg:container lg:mx-auto')
       div
         .mb-8(class='lg:mb-10')
@@ -48,13 +48,13 @@ block content
             | For fitness enthusiasts around the world, Corecircle makes fitness easier, social and more organized. Since our launch in October 2021, we’ve amassed
             span.font-medium.mx-2 hundreds of thousands
             | of happy users.
-        div.text-sm.letter-spacing.mb-10(class="lg:mb-0 lg:text-lg")
+        div.text-sm.letter-spacing.mb-10(class="lg:mb-0 xl:text-lg")
           dl.mt-5.grid.grid-cols-3(class='bg-orange-400/10 lg:bg-white/20 px-8 py-4 lg:p-0 rounded-full lg:overflow-hidden lg:shadow')
-            div(class='md:px-5 md:py-2 lg:pl-14')
+            div(class='md:px-5 md:py-2 lg:pl-10 xl:pl-14')
               dt.flex.justify-between.items-baseline(class='md:block lg:flex')
                 .promo_count 180k+
               dd Users
-            div(class='md:py-2')
+            div(class='lg:pl-4 md:py-2')
               dt.flex.justify-between.items-baseline(class='md:block lg:flex')
                 .promo_count 300k+
               dd Workouts Logged

@@ -2,19 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --corePrimaryColor: #FFA500;
+}
+
 .top-bg {
-  background: url("/img/top-bg.svg") top center no-repeat;
+  background: url("/img/top-bg-1x.webp") top center no-repeat;
   background-size: auto 23rem;
 }
 
 @screen lg {
   .top-bg {
+    background: url("/img/top-bg-2x.webp") top center no-repeat;
     background-size: 100% auto;
   }
 
   .bottom-bg {
     background: url("/img/bottom-bg.svg") bottom center no-repeat;
     background-size: 100% auto;
+  }
+}
+
+@screen 2xl {
+  .top-bg {
+    background: url("/img/top-bg-2x.webp") top center no-repeat;
+  }
+
+  .bottom-bg {
+    background-position: top center;
   }
 }
 
@@ -34,6 +49,10 @@ ul {
 
 .letter-spacing {
   letter-spacing: 0.05rem;
+}
+
+.lg\:container{
+  max-width: 1280px !important;
 }
 
 .h1 {
@@ -68,67 +87,83 @@ ul {
   align-items: center;
   color: white;
 
-  background: linear-gradient(131.73deg, #FFA500 0%, #FFCB37 100%);
+  background: linear-gradient(131.73deg, var(--corePrimaryColor) 0%, #FFCB37 100%);
   box-shadow: 0 3px 30px rgba(73, 73, 73, 0.15);
 }
 
 .bg-orange-400{
-  background-color: #FFA500;
+  background-color: var(--corePrimaryColor);
 }
 .text-orange-400{
-  color: #FFA500;
+  color: var(--corePrimaryColor);
 }
 
 .promo_count{
-  @apply flex items-baseline text-2xl lg:text-3xl font-semibold pt-2 leading-none;
+  @apply flex items-baseline text-2xl lg:text-3xl font-semibold pt-2 lg:pt-0 xl:pt-2 leading-none;
   @apply text-orange-400 lg:text-white;
 }
 
 
-details {
-  @apply py-6 border-b border-gray-200;
+.faq {
+  @apply pt-6 border-t border-gray-200;
 }
-details:last-of-type{
+.faq:first-of-type {
   @apply border-0;
 }
-
-details[open] > summary {
-  @apply text-orange-400 text-2xl;
+.accordion {
+  @apply flex w-full font-light text-2xl outline-0 transition mb-6;
+  @apply hover:text-orange-400 hover:cursor-pointer;
 }
-
-summary {
-  @apply transition duration-300 hover:text-orange-400 hover:cursor-pointer;
-  display: flex;
-  list-style: none;
+.accordion.active {
+  @apply text-orange-400;
 }
-details summary { list-style-type: none; }
-details summary::-webkit-details-marker { display: none; }
-details summary::marker { display: none; }
-
-
-details[open] .summary-text {
-  @apply opacity-100;
-}
-
-.summary-text{
-  @apply transition duration-300 opacity-0 ;
-}
-
-.summary_icon {
-  @apply transition duration-300 inline-block w-5 h-5 text-gray-400 mt-1 ml-auto;
-  min-width: 2rem;
-}
-details[open] .summary_icon {
+.accordion.active .accordion_icon{
   @apply text-orange-400 rotate-180;
 }
-
-@keyframes sweep {
-  0%    {opacity: 0; transform: translateX(-0.5rem)}
-  100%  {opacity: 1; transform: translateX(0)}
+.accordion:hover .accordion_icon{
+  @apply text-orange-400;
+}
+.accordion.active + .panel {
+  @apply mb-6;
+}
+.panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.accordion_icon {
+  @apply transition duration-300 inline-block w-5 h-5 text-gray-400 mt-1 ml-auto;
 }
 
 
 .swiper {
-  width: 400px;
-  height: 400px;
+  width: 275px;
+  height: 275px;
+}
+@screen md {
+  .swiper {
+    width: 400px;
+    height: 400px;
+  }
+}
+@screen lg {
+  .swiper {
+    width: 380px;
+    height: 380px;
+  }
+}
+@screen xl {
+  .swiper {
+    width: 420px;
+    height: 420px;
+  }
+}
+.swiper-pagination-bullets {
+  bottom: -2rem !important;
+}
+.swiper-pagination-bullet {
+  margin: 0 0.75rem !important;
+}
+.swiper-pagination-bullet-active{
+  background: var(--corePrimaryColor) !important;
 }

@@ -13,8 +13,8 @@ html(lang="en")
     script(defer src='https://unpkg.com/swiper@8/swiper-bundle.min.js')
     script(defer src="/js/script.js")
   body.min-h-screen
-    .flex.flex-col.min-h-screen.top-bg.p-4(class="md:p-8 lg:p-0")
-      include menu.pug
+    .flex.flex-col.min-h-screen.top-bg.p-4(class="md:p-8 lg:py-0 lg:px-4")
+      include _menu
       main
         block content
-      include footer
+      include _footer
