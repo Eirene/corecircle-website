@@ -4,6 +4,7 @@ html(lang="en")
     meta(charset='utf-8')
     meta(name='viewport' content='width=device-width, initial-scale=1')
     meta(name='description' content=description)
+    meta(name="theme-color" content="#FFA500")
     title #{title}
     link(rel='apple-touch-icon' sizes='180x180' href='/apple-touch-icon.png')
     link(rel='icon' type='image/png' sizes='32x32' href='/favicon-32x32.png')
@@ -11,13 +12,13 @@ html(lang="en")
     link(rel='manifest' href='/site.webmanifest')
     link(rel='preconnect' href='https://fonts.googleapis.com')
     link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
-    link(href='https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap' rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap' rel='stylesheet preload')
     link(rel="stylesheet" href="/style.css")
-    link(rel='stylesheet' href="https://unpkg.com/swiper@8/swiper-bundle.min.css")
-    script(defer src='https://unpkg.com/swiper@8/swiper-bundle.min.js')
+    script(defer src='/js/swiper-bundle.min.js')
+    script(defer src='/js/lazysizes.min.js')
     script(defer src="/js/script.js")
   body.min-h-screen.bg-gray-50
-    .flex.flex-col.min-h-screen.top-bg.p-4(class="md:p-8 lg:py-0 lg:px-4").bg-white.container.mx-auto.shadow-md
+    .site-container
       include _menu
       main
         block content

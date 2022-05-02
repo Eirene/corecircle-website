@@ -1,7 +1,7 @@
 footer.py-5.mt-auto(class="lg:container lg:mx-auto 160 lg:py-10")
   div(class="lg:flex lg:items-center")
     .logo.mb-4(class="lg:mb-0 lg:block")
-      a(href="/").flex.items-center
+      a(href="/" aria-label="Corecircle logo").flex.items-center
         .inline-flex.h-6.text-orange-400
           include ../partials/logo_icon
         .inline-flex.h-4.text-orange-400.ml-2
@@ -15,11 +15,11 @@ footer.py-5.mt-auto(class="lg:container lg:mx-auto 160 lg:py-10")
         a(href="https://www.instagram.com/corecircleapp/?hl=en" target="_blank") Contact Us
       li.mt-4.ml-8(class="md:ml-auto md:mt-0")
         .flex.gap-8
-          a.bg-orange-400.rounded-full.h-8.w-8.flex.items-center.justify-center(href="https://www.instagram.com/corecircleapp/?hl=en" target="_blank")
+          a.bg-orange-400.rounded-full.h-8.w-8.flex.items-center.justify-center(href="https://www.instagram.com/corecircleapp/?hl=en" target="_blank" aria-label="Corecircle Instagram")
             .inline-block.w-4.h-4.text-white
               include ../partials/icon_instagram
 
-          a.bg-orange-400.rounded-full.h-8.w-8.flex.items-center.justify-center(href="https://www.tiktok.com/@corecircle?lang=en" target="_blank")
+          a.bg-orange-400.rounded-full.h-8.w-8.flex.items-center.justify-center(href="https://www.tiktok.com/@corecircle?lang=en" target="_blank" aria-label="Corecircle Tik Tok")
             .inline-block.w-4.h-4.text-white
               include ../partials/icon_tiktok
 
