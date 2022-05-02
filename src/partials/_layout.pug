@@ -16,8 +16,8 @@ html(lang="en")
     link(rel='stylesheet' href="https://unpkg.com/swiper@8/swiper-bundle.min.css")
     script(defer src='https://unpkg.com/swiper@8/swiper-bundle.min.js')
     script(defer src="/js/script.js")
-  body.min-h-screen
-    .flex.flex-col.min-h-screen.top-bg.p-4(class="md:p-8 lg:py-0 lg:px-4")
+  body.min-h-screen.bg-gray-50
+    .flex.flex-col.min-h-screen.top-bg.p-4(class="md:p-8 lg:py-0 lg:px-4").bg-white.container.mx-auto.shadow-md
       include _menu
       main
         block content
