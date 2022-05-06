@@ -75,8 +75,7 @@ ul {
   align-items: center;
   padding: 4px 24px;
   letter-spacing: 0.01rem;
-
-  background: linear-gradient(91.28deg, rgba(255, 165, 0, 0.2) 11.48%, rgba(255, 121, 85, 0.2) 53.89%, rgba(80, 107, 208, 0.2) 133.02%);
+  background: linear-gradient(91.28deg, rgba(237, 153, 0, 0.2) 11.48%, rgba(255, 182, 116, 0.2) 53.89%, rgba(255, 0, 0, 0.2) 133.02%);
 }
 
 .btn-primary{
