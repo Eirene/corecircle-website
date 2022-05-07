@@ -113,7 +113,8 @@ ul {
   @apply border-0;
 }
 .accordion {
-  @apply flex w-full font-light text-2xl outline-0 transition mb-6;
+  @apply flex justify-between w-full transition mb-6;
+  @apply font-light text-2xl outline-0 text-left;
   @apply hover:text-orange-400 hover:cursor-pointer;
 }
 .accordion.active {
@@ -134,39 +135,5 @@ ul {
   transition: max-height 0.2s ease-out;
 }
 .accordion_icon {
-  @apply transition duration-300 inline-block w-5 h-5 text-gray-400 mt-1 ml-auto;
+  @apply shrink-0 transition duration-300 inline-block w-5 h-5 text-gray-400 mt-1 ml-4;
 }
-
-
-.swiper {
-  width: 275px;
-  height: 275px;
-}
-@screen md {
-  .swiper {
-    width: 400px;
-    height: 400px;
-  }
-}
-@screen lg {
-  .swiper {
-    width: 380px;
-    height: 380px;
-  }
-}
-@screen xl {
-  .swiper {
-    width: 420px;
-    height: 420px;
-  }
-}
-.swiper-pagination-bullets {
-  bottom: -2rem !important;
-}
-.swiper-pagination-bullet {
-  margin: 0 0.75rem !important;
-}
-.swiper-pagination-bullet-active{
-  background: var(--corePrimaryColor) !important;
-}
-
