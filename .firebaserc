@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "corecircle"
+  },
+  "targets": {
+    "corecircle": {
+      "hosting": {
+        "front-website": [
+          "corecircle-web-site"
+        ]
+      }
+    }
+  }
+}

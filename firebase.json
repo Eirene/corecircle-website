@@ -1,10 +1,13 @@
 {
   "hosting": [
     {
-      "target": "corecircle-website-staging",
-      "predeploy": ["yarn build"],
+      "target": "front-website",
+      "predeploy": [
+        "npm run build"
+      ],
       "cleanUrls": true,
       "public": "dist",
+      "appAssociation": "AUTO",
       "headers": [
         {
           "source": "/api{,/**}",
@@ -29,11 +32,6 @@
           ]
         }
       ],
-      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
-    },
-    {
-      "target": "ginmebel",
-      "public": "dist",
       "ignore": [
         "firebase.json",
         "**/.*",
@@ -41,23 +39,23 @@
       ],
       "rewrites": [
         {
-          "source": "**",
-          "destination": "/index.html"
-        }
-      ],
-      "headers": [
+          "source": "/l/**",
+          "dynamicLinks": true
+        },
         {
-          "source": "**/*.@(js|css|jpg|jpeg|gif|png|svg|ico|eot|ttf|woff|txt)",
-          "headers": [
-            {
-              "key": "Cache-Control",
-              "value": "max-age=31536000"
-            },
-            {
-              "key": "Content-Encoding",
-              "value": "gzip"
-            }
-          ]
+          "source": "/p/**",
+          "dynamicLinks": true
+        },
+        {
+          "source": "/w/**",
+          "dynamicLinks": true
+        },
+        {
+          "source": "/api{,/**}",
+          "run": {
+            "serviceId": "rest-api",
+            "region": "us-central1"
+          }
         }
       ]
     }

@@ -15,7 +15,7 @@
     "build:templates": "pug -O pug.json src/views --out dist",
     "build:styles": "tailwindcss -i ./src/style.css -o ./dist/style.css",
     "build:assets": "cp -R src/assets/* dist/",
-    "deploy": "firebase deploy --only hosting:corecircle-website-staging"
+    "deploy": "firebase deploy --only hosting:front-website"
   },
   "devDependencies": {
     "browser-sync": "^2.27.9",
